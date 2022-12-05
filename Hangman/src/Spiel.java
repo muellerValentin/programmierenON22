@@ -8,7 +8,7 @@ public class Spiel {
 	private ArrayList <Character> schonVersucht = new ArrayList<Character>();
 	private boolean gewonnen = false;
 	private boolean verloren = false;
-	private static final String validLetters = "abcdefghijklmnopqrstuvwxyzöäüß";
+	private static final String validLetters = "abcdefghijklmnopqrstuvwxyz";
 	
 	Spiel(String gesWort){
 		this.gesWort = gesWort.toLowerCase();

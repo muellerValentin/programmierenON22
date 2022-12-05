@@ -53,3 +53,11 @@ Benötigte Variablen:
 
 Mögliche Zusatzfunktionen:
 - Kleine Nachrichten bei richtiger/falscher Eingabe
+
+
+Aufgaben Stand 05. Dezember:
+
+- Prüfung des eingegebenen Wortes: Sind die enthaltenen Buchstaben erlaubt?
+- Funktion, um gegen den Computer zu spielen. Dafür Array mit z.B. 10 Wörter anlegen, die dann zufällig ausgewählt werden.
+- Umlaute: ä,ö,ü müssen bei Eingabe erkannt und durch ae, oe und ue ersetzt werden.
+- Benarichtigung bei Sieg/Niederlage einfügen

@@ -67,7 +67,7 @@ public class Spiel {
 		}
 	}
 	
-	public void zeichneSpiel() {/* zeichnet den aktuellen Spielstand*/
+	public void zeichneSpiel() {/* zeichnet den aktuellen Spielstand basierend auf der anzahl der gemachten Fehler*/
 		System.out.println("\n");
 		switch (fehlerAnzahl) {
 		case 0: break;
@@ -128,17 +128,17 @@ public class Spiel {
 				System.out.println(" __|__");
 				System.out.println("/     \\");
 				break;
-		case 10: System.out.println("   _____");
-				System.out.println("   |´    ò");
-				System.out.println("   |    /O\\");
-				System.out.println("   |    /");
+		case 10:System.out.println("   _____");
+				System.out.println("   |´   ò");
+				System.out.println("   |   /O\\");
+				System.out.println("   |   /");
 				System.out.println(" __|__");
 				System.out.println("/     \\");
 				break;
-		case 11: System.out.println("   _____");
-				System.out.println("   |´    ò");
-				System.out.println("   |    /O\\");
-				System.out.println("   |    / \\");
+		case 11:System.out.println("   _____");
+				System.out.println("   |´   ò");
+				System.out.println("   |   /O\\");
+				System.out.println("   |   / \\");
 				System.out.println(" __|__");
 				System.out.println("/     \\");
 				break;
@@ -151,5 +151,35 @@ public class Spiel {
 		System.out.print("Schonmal geratene Buschstaben: ");
 		System.out.println(schonVersucht);
 		System.out.println("\n");
+	}
+	public boolean getStatus(){
+		if(fehlerAnzahl >= 11) { // wurden mehr als 11 Fehler gemacht gilt das Spiel verloren
+			verloren = true;
+		}
+		gewonnen = true;
+		for (int i = 0;i < gesWort.length();i++) {
+			/*Wenn alle Buchstaben erraten wurden ist das spiel gewonnen.
+			 * Dies wird über eine for-Schleife geprüft die alle erratenen Buchstaben mit dem gesuchten wort abgleicht
+			 * wenn ein Buchstabe fehlt wird die gewonnen Variable wieder auf falsch gesetzt*/
+			if(wortArr[i] != gesWort.charAt(i)) {
+				gewonnen = false;
+				break;
+			}
+		}
+		/*sofern das Spiel noch nicht gewonnen oder verloren wurde wird der Status true ausgegeben
+		 * das spiel läuft also noch weiter*/
+		if (gewonnen == false && verloren == false) {
+			return true;								
+		}else if(gewonnen == true) { //wenn das Spiel gewonnen wurde wird eine Siegernachricht ausgegeben und der Spielstatus auf falsch gesetzt
+			System.out.println("Hurra du hast das Spiel gewonnen!!!!");
+			return false;
+		}else{
+			/*wenn das Spiel verloren wurde wird eine Trostnachricht ausgegeben und der Spielstatus auf falsch gesetzt
+			 *trifft keine der vorigen abfragen zu gilt das spiel als verloren dies ist notwendig da java bedingte returns nicht anerkennt
+			 *und immer ein default das in jedem fall ausgelöst werden kann braucht*/
+			System.out.println("Leider hast du dieses Spiel verloren. Vielleicht klappt es ja beim nächsten Mal.");
+			return false;
+		}
+		
 	}
 }

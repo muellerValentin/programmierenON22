@@ -9,4 +9,4 @@ Studierende:
  - Jannik Oswald
  - Lena Steinbrink
  - Valentin Müller
- - Vy Nguyen
+ - Thi Tuong Vy Nguyen

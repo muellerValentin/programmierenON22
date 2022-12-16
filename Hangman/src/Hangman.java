@@ -39,7 +39,7 @@ public class Hangman {
 				
 				// Zufällige Zahl für die Wortauswahl
 				int min = 0;
-				int max = 4;
+				int max = woerter.length;
 				
 				Random random = new Random();
 				

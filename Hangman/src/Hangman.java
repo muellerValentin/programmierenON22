@@ -13,7 +13,7 @@ public class Hangman {
 		for(int i=0; i<60;i++) {
 	        System.out.println();
 		}
-		while(!input.equals("exit")) {
+		while(gg.getStatus()) {
 			System.out.print("Ein Buchstabe bitte: ");
 			input = scan.nextLine();
 			for(int i=0; i<30;i++) {
@@ -22,6 +22,9 @@ public class Hangman {
 			inChar = input.charAt(0);
 			gg.verglChar(inChar);
 			gg.zeichneSpiel();
+			if(input.equals("exit")) {
+				break;
+			}
 		}
 		System.out.println("Du hast das Programm beendet");
 		scan.close();

@@ -6,7 +6,7 @@ Aufgabe: Programmierung eines Spiels in Java
 
 Studierende:
  - Celine Gugel
- - Jannik Oswald
- - Lena Steinbrink
+ - Jk-Ow Jannik Oßwald
+ - ON22-LS Lena Steinbrink
  - Valentin Müller
  - Thi Tuong Vy Nguyen

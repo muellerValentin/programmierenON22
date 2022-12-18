@@ -5,8 +5,8 @@ Gruppenarbeit zu T3: Programmierung
 Aufgabe: Programmierung eines Spiels in Java
 
 Studierende:
- - Celine Gugel
- - Jk-Ow Jannik Oßwald
- - ON22-LS Lena Steinbrink
- - Valentin Müller
- - Thi Tuong Vy Nguyen
+ - ON22CelineG      Celine Gugel
+ - Jk-Ow            Jannik Oßwald
+ - ON22LS           Lena Steinbrink
+ - muellerValentin  Valentin Müller
+ - on22vy           Thi Tuong Vy Nguyen

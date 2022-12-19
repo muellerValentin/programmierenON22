@@ -66,7 +66,7 @@ public class Hangman {
 				input = scan.nextLine();
 				boolean wert = Spiel.prüfeEingabe(input);
 				if (wert == false) 
-					System.out.println("Das Wort sollte mindesten 2 Zeichen beinhalten. Bitte erneut eingeben!");
+					System.out.println("Das Wort sollte mindesten 2 Zeichen und kein Sonderzeichen beinhalten. Bitte erneut eingeben!");
 				else break;
 				}		
 				

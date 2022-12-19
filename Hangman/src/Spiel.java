@@ -182,7 +182,7 @@ public class Spiel {
 			return false;
 		}
 	}
-	public static boolean prüfeEingabe(String Wort){ //Überprüft ein Wort ob es mindestens 2 Buchstaben hat und alle buchstaben akzeptiert sind
+	public static boolean prüfeEingabe(String Wort){ //Überprüft ein Wort ob es mindestens 2 Buchstaben hat und alle buchstaben akzeptiert sind. Diese Überprüfung muss extern durchgeführt werden.
 		boolean wert = true;
 		for(int i=0; i<Wort.length(); i++) {
 			if(!validateInput(Wort.charAt(i))){

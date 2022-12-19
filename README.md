@@ -2,7 +2,8 @@
 
 Gruppenarbeit zu T3: Programmierung
 
-Aufgabe: Programmierung eines Spiels in Java
+Aufgabe: Programmierung eines Spiels in Java 
+Ausgewähltes Spiel: Hangman
 
 Studierende:
  - ON22CelineG      Celine Gugel

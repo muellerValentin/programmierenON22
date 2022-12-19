@@ -178,6 +178,7 @@ public class Spiel {
 			 *trifft keine der vorigen abfragen zu gilt das spiel als verloren dies ist notwendig da java bedingte returns nicht anerkennt
 			 *und immer ein default das in jedem fall ausgelöst werden kann braucht*/
 			System.out.println("Leider hast du dieses Spiel verloren. Vielleicht klappt es ja beim nächsten Mal.");
+			System.out.println("Das zu erratende Wort war übrigens " + gesWort + ".");
 			return false;
 		}
 		

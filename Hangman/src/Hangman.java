@@ -78,7 +78,7 @@ public class Hangman {
 		for(int i=0; i<60;i++) {
 	        System.out.println();
 		}
-		System.out.println("Wenn du das Laufende Spiel beenden möchtest,\n kannst du exit eingeben.");
+		System.out.println("Wenn du das Spiel beenden möchtest,\n kannst du exit eingeben.");
 		while(gg.getStatus()&&(!input.equals("exit"))) {
 			System.out.print("Ein Buchstabe bitte: ");
 			input = scan.nextLine();

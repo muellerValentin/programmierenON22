@@ -49,7 +49,7 @@ public class Spiel {
 		
 	}
 	
-	private boolean contains(char in, String pruefWert) { /*ueberprueft ob das gesuchte Wort den Buschstabe enthält*/
+	private static boolean contains(char in, String pruefWert) { /*ueberprueft ob das gesuchte Wort den Buschstabe enthält*/
 		for(int i =0; i<pruefWert.length(); i++) {
 			if(in == pruefWert.charAt(i)) {
 				return true;
@@ -58,7 +58,7 @@ public class Spiel {
 		return false;
 	}
 	
-	private boolean validateInput(char input) { /*ueberprueft die ob die Eingabe im Deffinierten Wertebereich liegt*/
+	private static boolean validateInput(char input) { /*ueberprueft die ob die Eingabe im Deffinierten Wertebereich liegt*/
 		input = Character.toLowerCase(input);
 		if(contains(input,validLetters)) {
 			return true;
@@ -181,6 +181,18 @@ public class Spiel {
 			System.out.println("Das zu erratende Wort war übrigens " + gesWort + ".");
 			return false;
 		}
-		
+	}
+	public static boolean prüfeEingabe(String Wort){ //Überprüft ein Wort ob es mindestens 2 Buchstaben hat und alle buchstaben akzeptiert sind. Diese Überprüfung muss extern durchgeführt werden.
+		boolean wert = true;
+		for(int i=0; i<Wort.length(); i++) {
+			if(!validateInput(Wort.charAt(i))){
+				wert = false;
+				break;
+			}
+		}
+		if(Wort.length() < 2) {
+			wert = false;
+		}
+		return wert;
 	}
 }

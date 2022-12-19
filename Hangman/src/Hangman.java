@@ -59,10 +59,17 @@ public class Hangman {
 				/////////////////////////////////////////////////////////
 				
 				System.out.println("Es wurde Spielmodus 2 gewählt.\n \n");
-				
+				while(!input.equals("exit")) {
 				System.out.println("Gib ein zu erratendes Wort ein:");
+				
 				// Die Variable input wird auf das eingegebene Wort gesetzt
 				input = scan.nextLine();
+				boolean wert = Spiel.prüfeEingabe(input);
+				if (wert == false) 
+					System.out.println("Das Wort sollte mindesten 2 Zeichen beinhalten. Bitte erneut eingeben!");
+				else break;
+				}		
+				
 			}
 			case 3 ->System.out.println("Das Spiel wird beendet.");
 			default -> System.out.println("Falsche Eingabe!");

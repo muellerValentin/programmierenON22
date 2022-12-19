@@ -5,6 +5,7 @@ public class Hangman {
 
 	public static void main(String[] args) {
 		
+		// Initialisierung & Deklaration der benötigten Variablen
 		Scanner scan = new Scanner(System.in);
 		int spielmodus = 0;
 		String input = "";
@@ -19,9 +20,13 @@ public class Hangman {
 		// Abfrage: Welcher Spielmodus soll gestartet werden?
 		// Spielmodus 1: Gegen den Computer (mit vorgegebenen Wörtern).
 		// Spielmodus 2: Wort wird selbst eingegeben und dann gespielt.
+		// Spielmodus 3: Das Spiel wird beendet.
+		
+		// Spielabbruch bei der Eingabe "exit"
 		while(!input.equals("exit")) {
 		
-		System.out.println("Das Spiel Hangman wurde gestartet! \n"
+			// Erste Textausgabe beim Starten des Spiels
+			System.out.println("Das Spiel Hangman wurde gestartet! \n"
 				+ "\n"
 				+ "Spielmodus 1: Spiele gegen den Computer \n"
 				+ "Spielmodus 2: Gib ein eigenes Wort ein (Multiplayer) \n"
@@ -39,15 +44,18 @@ public class Hangman {
 				/////////////////////////////////////////////////////////
 				
 				System.out.println("Es wurde Spielmodus 1 gewählt.");
-				// Zufällige Zahl für die Wortauswahl
+				// Berechnung einer zufälligen Zahl für die Wortauswahl
 				int min = 0;
 				int max = woerter.length;
 				
 				Random random = new Random();
 				
 				int randomNumber = random.nextInt(max + min);
-				System.out.println(randomNumber);
 				
+				// Ausgabe der zufälligen Zahl 
+				// System.out.println(randomNumber);
+				
+				// Ausgabe des zufällig gewählten Wortes aus dem Array.
 				System.out.println(woerter[randomNumber]);
 				
 				// Die Variable input wird auf das zufällig gewählte Wort gesetzt
@@ -64,17 +72,30 @@ public class Hangman {
 				// Die Variable input wird auf das eingegebene Wort gesetzt
 				input = scan.nextLine();
 			}
-			case 3 ->System.out.println("Das Spiel wird beendet.");
+			case 3 -> {
+				/////////////////////////////////////////////////////////
+				//////////////////// Spielmodus 3 ///////////////////////
+				/////////////////////////////////////////////////////////
+				System.out.println("Das Spiel wird beendet.");
+			}
 			default -> System.out.println("Falsche Eingabe!");
 		}
+		
+		// Das Spiel wird im Spielmodus 3 beendet
 		if(spielmodus == 3) {
 			break;
 		}
+		
+		// Ein neues Objekt der Klasse Spiel wird geschaffen, an dieses wird die Variable "input" übergeben.
+		// "input" ist ein zufälliges Wort aus dem Array (Spielmodus 1) oder ein eingegebenes Wort (Spielmodus 2).
 		Spiel gg = new Spiel(input);
 		
 		char inChar;
-		input = "Start";
 		
+		// Input wird auf "" gesetzt, falls bei Spielmodus 2 das zu erratende Wort "exit" war. Ansonsten würde das Spiel in der nächsten while-Schleife abgebrochen werden.
+		input = "";
+		
+		// In der Console werden 60 leere Zeilen ausgegeben, damit die Console "leer" angezeigt wird. Die alten Inhalte werden einfach nach oben geschoben.
 		for(int i=0; i<60;i++) {
 	        System.out.println();
 		}

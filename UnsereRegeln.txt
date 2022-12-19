@@ -1,0 +1,9 @@
+Um in unserer Gruppe ein möglichst effizientes Arbeiten mit Git zu ermöglichen halten wir folgende Regeln fest.
+
+1. Häufige und kleine Commits
+2. Compilierter Code wird nicht commitet um merge-Konflikte zu verhindern
+3. Klare commit messages formulieren damit alle verstehen was geändert wurde
+4. Jeder hat einen "Working-Branch" welchem er alle änderungen durchführt bevor er sie in den master-Branch merged
+5. Mergekonflikte werden von dem verursacher behoben gegebenenfalls in Rücksprache mit anderen Teilnehmern
+6. Niemand sollte nicht funktionsfähigen Code commiten
+7. Commits sollen immer auf dem eigenen Branch erstellt werden und nicht in den Master-Branch Commitet werden

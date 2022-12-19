@@ -85,8 +85,10 @@ public class Hangman {
 			for(int i=0; i<30;i++) {
 		        System.out.println();
 			}
-			inChar = input.charAt(0);
-			gg.verglChar(inChar);
+			if(input.length() >0) { //wird nur ausgeführt wenn eine die eingabe mindestens ein Zeichen enthält
+				inChar = input.charAt(0);
+				gg.verglChar(inChar);
+			}
 			gg.zeichneSpiel();
 		}
 	}

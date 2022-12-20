@@ -64,16 +64,16 @@ public class Hangman {
 				/////////////////////////////////////////////////////////
 				
 				System.out.println("Es wurde Spielmodus 2 gewählt.\n \n");
-				while(!input.equals("exit")) {
+				 do {
 				System.out.println("Gib ein zu erratendes Wort ein:");
 				
 				// Die Variable input wird auf das eingegebene Wort gesetzt
 				input = scan.nextLine();
-				boolean wert = Spiel.prüfeEingabe(input);
-				if (wert == false) 
-					System.out.println("Das Wort sollte mindesten 2 Zeichen und kein Sonderzeichen beinhalten. Bitte erneut eingeben!");
-				else break;
-				}		
+				//boolean wert = Spiel.prüfeEingabe(input);
+				if (Spiel.prüfeEingabe(input) == false) 
+					System.out.println("Falsche Eingabe!\nDas Wort sollte mindesten 2 Zeichen und kein Sonderzeichen beinhalten. Bitte erneut eingeben!");
+				
+				}while(Spiel.prüfeEingabe(input) == false);		
 				
 			}
 			case 3 -> {
@@ -105,7 +105,7 @@ public class Hangman {
 		for(int i=0; i<60;i++) {
 	        System.out.println();
 		}
-		System.out.println("Wenn du das Spiel beenden möchtest,\n kannst du exit eingeben.");
+		System.out.println("Wenn du das Spiel beenden möchtest,kannst du exit eingeben.");
 		while(gg.getStatus()&&(!input.equals("exit"))) {
 			System.out.print("Ein Buchstabe bitte: ");
 			input = scan.nextLine();

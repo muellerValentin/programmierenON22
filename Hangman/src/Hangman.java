@@ -96,10 +96,12 @@ public class Hangman {
 		
 		char inChar;
 		
-		// Input wird auf "" gesetzt, falls bei Spielmodus 2 das zu erratende Wort "exit" war. Ansonsten würde das Spiel in der nächsten while-Schleife abgebrochen werden.
+		// Input wird auf "" gesetzt, falls bei Spielmodus 2 das zu erratende Wort "exit" war. 
+		// Ansonsten würde das Spiel in der nächsten while-Schleife abgebrochen werden.
 		input = "";
 		
-		// In der Console werden 60 leere Zeilen ausgegeben, damit die Console "leer" angezeigt wird. Die alten Inhalte werden einfach nach oben geschoben.
+		// In der Console werden 60 leere Zeilen ausgegeben, damit die Console "leer" angezeigt wird. 
+		// Die alten Inhalte werden einfach nach oben geschoben.
 		for(int i=0; i<60;i++) {
 	        System.out.println();
 		}
@@ -110,7 +112,8 @@ public class Hangman {
 			for(int i=0; i<30;i++) {
 		        System.out.println();
 			}
-			if(input.length() > 0) { //wird nur ausgeführt wenn eine die Eingabe mindestens ein Zeichen enthält
+			// Überprüfung, ob mindestens 1 Zeichen eingegeben wurde
+			if(input.length() > 0) { 
 				
 				// Vergleicht den eingegebenen Buchstaben mit dem gesuchten Wort und den schon versuchten Buchstaben
 				inChar = input.charAt(0);

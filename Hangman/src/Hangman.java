@@ -52,9 +52,6 @@ public class Hangman {
 				
 				int randomNumber = random.nextInt(max + min);
 				
-				// Ausgabe der zufälligen Zahl 
-				// System.out.println(randomNumber);
-				
 				// Ausgabe des zufällig gewählten Wortes aus dem Array.
 				System.out.println(woerter[randomNumber]);
 				
@@ -113,10 +110,13 @@ public class Hangman {
 			for(int i=0; i<30;i++) {
 		        System.out.println();
 			}
-			if(input.length() >0) { //wird nur ausgeführt wenn eine die eingabe mindestens ein Zeichen enthält
+			if(input.length() > 0) { //wird nur ausgeführt wenn eine die Eingabe mindestens ein Zeichen enthält
+				
+				// Vergleicht den eingegebenen Buchstaben mit dem gesuchten Wort und den schon versuchten Buchstaben
 				inChar = input.charAt(0);
 				gg.verglChar(inChar);
 			}
+			// Die aktuelle Rundes des Spiel wird gezeichnet
 			gg.zeichneSpiel();
 		}
 	}
